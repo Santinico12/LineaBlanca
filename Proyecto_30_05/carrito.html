@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="Logo Tienda Flores">
+        </div>
+        <nav>
+            <div class="categories-dropdown">
+                <button class="dropdown-button">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="#">Lavadoras</a>
+                    <a href="#">Refrigeradores</a>
+                    <a href="#">Microondas</a>
+                </div>
+            </div>
+            <div class="user-cart">
+                <a href="carrito.html"><img src="./images/cart-icon.png" alt="Carrito"> Carrito</a>
+                <a href="#"><img src="./images/user-icon.png" alt="Usuario"> Usuario</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="cart">
+            <h1>Carrito de Compras</h1>
+            <div class="cart-item">
+                <div class="cart-image">
+                    <img src="producto1.png" alt="Producto 1">
+                </div>
+                <div class="cart-details">
+                    <h2>Producto 1</h2>
+                    <p>Precio: $25.00</p>
+                    <p>Cantidad: <input type="number" value="1" min="1"></p>
+                    <button class="remove-item">Eliminar</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="cart-image">
+                    <img src="producto2.png" alt="Producto 2">
+                </div>
+                <div class="cart-details">
+                    <h2>Producto 2</h2>
+                    <p>Precio: $30.00</p>
+                    <p>Cantidad: <input type="number" value="1" min="1"></p>
+                    <button class="remove-item">Eliminar</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="cart-image">
+                    <img src="producto3.png" alt="Producto 3">
+                </div>
+                <div class="cart-details">
+                    <h2>Producto 3</h2>
+                    <p>Precio: $40.00</p>
+                    <p>Cantidad: <input type="number" value="1" min="1"></p>
+                    <button class="remove-item">Eliminar</button>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h2>Total: $95.00</h2>
+                <button class="checkout">Pagar</button>
+            </div>
+        </section>
+    </main>
+    <section class="store-info">
+        <div class="store-map">
+            <h2>Dirección de la tienda</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.586100616287!2d-66.15993348953748!3d-17.38363841402331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3740ee6511f97%3A0xdd4f47861921daa9!2sEMI%2C%20C.%20Lanza%2C%20Cochabamba!5e0!3m2!1ses!2sbo!4v1717118293571!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="social-media">
+            <h2>Redes sociales</h2>
+            <a href="https://www.instagram.com/emicbba/"><img src="./images/intagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/EMICbbaBO/?locale=es_LA"><img src="./images/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/emicbba?lang=es"><img src="./images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.tiktok.com/@emi.cbba.oficial"><img src="./images/tiktok.png" alt="TikTok"></a>
+        </div>
+        <div class="payment-methods">
+            <h2>Métodos de pago</h2>
+            <img src="./images/visa.png" alt="Visa">
+            <img src="./images/paypal.png" alt="PayPal">
+            <img src="./images/qr.png" alt="QR Code">
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Tienda Flores. Todos los derechos reservados.</p>
+</footer>
+    <script src="carrito.js"></script>
+</body>
+</html>

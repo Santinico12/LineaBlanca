@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="usuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./images/logo.png" alt="Logo Tienda Flores"></a>
+        </div>
+        <nav>
+            <div class="categories-dropdown">
+                <button class="dropdown-button">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="#">Lavadoras</a>
+                    <a href="#">Refrigeradores</a>
+                    <a href="#">Microondas</a>
+                </div>
+            </div>
+            <div class="user-cart">
+                <a href="#cart"><img src="./images/cart-icon.png" alt="Carrito"> Carrito</a>
+                <a href="#user"><img src="./images/user-icon.png" alt="Usuario"> Usuario</a>
+            </div>
+        </nav>
+    </header>
+    <div class="user-container">
+        <aside class="sidebar">
+            <div class="profile-picture">
+                <img src="./images/user-icon.png" alt="Usuario">
+                <p>Hola!</p>
+            </div>
+            <ul>
+                <li><button onclick="showSection('user-info')">Perfil</button></li>
+                <li><button onclick="showSection('user-orders')">Pedidos</button></li>
+                <li><button onclick="showSection('user-payment')">Tarjetas de crédito</button></li>
+                <li><button id="logout">Salir</button></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section id="user-info" class="content-section active">
+                <h2>Perfil</h2>
+                <div class="user-details">
+                    <p><strong>Nombre:</strong> <span id="first-name">Juan</span></p>
+                    <p><strong>Apellido:</strong> <span id="last-name">Pérez</span></p>
+                    <p><strong>Email:</strong> <span id="email">juan.perez@example.com</span></p>
+                    <p><strong>Documento:</strong> <span id="document">123456789</span></p>
+                    <p><strong>Género:</strong> <span id="gender">Masculino</span></p>
+                    <p><strong>Fecha de nacimiento:</strong> <span id="birthdate">01/01/1980</span></p>
+                    <p><strong>Teléfono:</strong> <span id="phone">+1234567890</span></p>
+                    <button onclick="showEditForm()">EDITAR</button>
+                </div>
+                <div class="user-edit-form" id="edit-form" style="display: none;">
+                    <h3>Editar Perfil</h3>
+                    <form id="edit-profile-form" onsubmit="saveProfile(event)">
+                        <label for="edit-first-name">Nombre:</label>
+                        <input type="text" id="edit-first-name" name="first-name" value="Juan">
+                        <label for="edit-last-name">Apellido:</label>
+                        <input type="text" id="edit-last-name" name="last-name" value="Pérez">
+                        <label for="edit-email">Email:</label>
+                        <input type="email" id="edit-email" name="email" value="juan.perez@example.com">
+                        <label for="edit-document">Documento:</label>
+                        <input type="text" id="edit-document" name="document" value="123456789">
+                        <label for="edit-gender">Género:</label>
+                        <input type="text" id="edit-gender" name="gender" value="Masculino">
+                        <label for="edit-birthdate">Fecha de nacimiento:</label>
+                        <input type="date" id="edit-birthdate" name="birthdate" value="1980-01-01">
+                        <label for="edit-phone">Teléfono:</label>
+                        <input type="text" id="edit-phone" name="phone" value="+1234567890">
+                        <button type="submit">GUARDAR</button>
+                        <button type="button" onclick="cancelEdit()">CANCELAR</button>
+                    </form>
+                </div>
+            </section>
+            <!-- Agregamos una sección para mostrar la lista de pedidos -->
+            <section id="user-orders" class="content-section">
+                <h2>Pedidos</h2>
+                <ul id="order-list">
+                <!-- La lista de pedidos se mostrará aquí -->
+                </ul>
+            </section>
+            <!-- Otras secciones se mostrarán aquí cuando se presionen los botones correspondientes -->
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tienda Flores. Todos los derechos reservados.</p>
+    </footer>
+    <script src="usuario.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
