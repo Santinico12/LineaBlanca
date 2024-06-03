@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrarproducto.css">
+    <title>Product CRUD</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .add-product-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .add-product-form input {
+            margin-bottom: 8px;
+            padding: 4px;
+        }
+
+        .add-product-form button {
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>SKU</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Characteristics</th>
+                <th>Images</th>
+                <th>Width</th>
+                <th>Height</th>
+                <th>Available</th>
+                <th>Provider</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="products-table-body">
+            <!-- Products will be inserted here -->
+        </tbody>
+    </table>
+    <div class="add-product-form">
+        <input type="text" id="new-product-name" placeholder="Name">
+        <input type="text" id="new-product-sku" placeholder="SKU">
+        <input type="text" id="new-product-description" placeholder="Description">
+        <input type="number" id="new-product-price" placeholder="Price">
+        <input type="text" id="new-product-category" placeholder="Category">
+        <input type="text" id="new-product-brand" placeholder="Brand">
+        <input type="text" id="new-product-characteristics" placeholder="Characteristics">
+        <input type="text" id="new-product-images" placeholder="Images">
+        <input type="number" id="new-product-width" placeholder="Width">
+        <input type="number" id="new-product-height" placeholder="Height">
+        <input type="number" id="new-product-available" placeholder="Available">
+        <input type="text" id="new-product-provider" placeholder="Provider">
+        <button id="add-product-button">Add Product</button>
+    </div>
+    <script src="registrarproducto.js"></script>
+</body>
+</html>
